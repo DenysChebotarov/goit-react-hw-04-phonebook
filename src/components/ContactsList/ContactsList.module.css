@@ -1,0 +1,11 @@
+.item{
+    display: flex;
+    gap: 15px;
+    align-items: baseline;
+}
+.button{
+    display: block;
+    border-radius: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+}

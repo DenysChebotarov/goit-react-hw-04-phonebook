@@ -1,0 +1,17 @@
+.form{
+    display:flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
+    align-items: baseline;
+}
+.input{
+    border-radius: 10px;
+    border-color: blue; 
+}
+.button{
+    display: block;
+    border-radius: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
