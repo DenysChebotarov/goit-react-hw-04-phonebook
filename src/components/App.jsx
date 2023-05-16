@@ -1,12 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ContactsForm from './ContactsForm/ContactsForm';
 import ContactsList from './ContactsList/ContactsList';
 import Filter from './Filter/Filter';
 
 const App = () => {
-  const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState(() => {
+    return JSON.parse(localStorage.getItem('contacts'));
+  });
   const [filter, setFilter] = useState('');
-
+// componentDidMount(){
+//   const contacts = localStorage.getItem('contacts');
+//   const parseContacts = JSON.parse(contacts);
+//   if(parseContacts){
+//     this.setState({contacts: parseContacts});
+//   }
+// }
+// componentDidUpdate(prevState){
+//   const nextContact = this.state.contacts;
+//   const prevContact = prevState.contacts;
+//   if(nextContact !== prevContact){
+//     localStorage.setItem('contacts', JSON.stringify(nextContact))
+//   }
   useEffect(() => {
     const storedContacts = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(storedContacts);
